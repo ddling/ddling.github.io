@@ -1,0 +1,11 @@
+{% assign latest_post = site.posts.first %}
+
+<div class="row post">
+  <div class="span8">
+    <h1 class="title"><a href="{{ latest_post.url }}" title="{{ latest_post.title }}">{{ latest_post.title }}</a> {% if latest_post.tagline %} <small>{{ latest_post.tagline }}</small>{% endif %}</h1>
+    {{ latest_post.content }}
+    <ul class="pager">
+      <li class="next"><a href="{{ BASE_PATH }}/archive.html" title="所有文章">查看所有文章 &rarr;</a></li>
+    </ul>
+  </div>
+</div>
